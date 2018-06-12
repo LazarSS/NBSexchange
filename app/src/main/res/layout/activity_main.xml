@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context="rs.ac.ni.pmf.nbsexchange.MainActivity">
+
+    <!-- <com.jjoe64.graphview.GraphView
+         android:layout_width="fill_parent"
+         android:layout_height="350dp"
+         android:id="@+id/graph" />-->
+
+    <android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swipe_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/datumText"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:id = "@+id/linLayScorll"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+            </ScrollView>
+        </LinearLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+    <TextView
+        android:id="@+id/datumText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/np"
+        android:layout_centerHorizontal="true"
+        android:text="DATUM"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent" />
+
+    <NumberPicker
+        android:id="@+id/np"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:descendantFocusability="blocksDescendants"
+        android:theme="@style/AppTheme"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="50dp" />
+
+    <TextView
+        android:id="@+id/textP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editText2"
+        android:layout_toEndOf="@+id/radioGrouoPSK"
+        android:text="Prodajni"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="117dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="67dp"
+        android:layout_toStartOf="@+id/np2"
+        android:ems="10"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary" />
+
+    <NumberPicker
+        android:id="@+id/np2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:descendantFocusability="blocksDescendants"
+        android:theme="@style/AppTheme"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="50dp" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="117dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/editText2"
+        android:layout_toEndOf="@+id/np"
+        android:ems="10"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary" />
+
+
+    <RadioGroup
+        android:id="@+id/radioGrouoPSK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioK"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:checked="false" />
+
+        <RadioButton
+            android:id="@+id/radioS"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/radioP"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_gravity="right"
+            android:checked="false" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editText2"
+        android:layout_centerHorizontal="true"
+        android:text="Srednji"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent" />
+
+    <TextView
+        android:id="@+id/textK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editText2"
+        android:layout_toStartOf="@+id/radioGrouoPSK"
+        android:text="Kupovni"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent" />
+
+</RelativeLayout>
